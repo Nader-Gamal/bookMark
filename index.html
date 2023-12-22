@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2655b3b7cf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="https://linkeep.netlify.app/images/bookmark-logo.png" alt="bookmark icon"/>
+    <title>BookMark</title>
+</head>
+<body>
+
+    <header class="top-nav">
+          <h1><a href="#">Bookmarker</a></h1>
+    </header>
+      
+      <main>
+          <section id="hero" class="container">
+            <div class="introduction">
+              <h1 class="heading-text">
+                So many <span class="highlight">links</span> <br />
+                so little time
+              </h1>
+              <p class="subheading-text">type, save, and read later at your own speed</p>
+            </div>
+      
+            <div class="form-container">
+              <div class="bookmark-form">
+                <div class="link-title form-element">
+                  <input tabindex="1" title="please fill out this field with valid text" class="editable name-input" type="text" id="title" placeholder="Site Name" />
+                </div>
+              <div id="siteNameValid">
+                <div class="alert alert-danger" role="alert">
+                  Invalid Site Name, example: abc
+                </div>
+              </div>
+                <div class="link-url form-element">
+                  <input tabindex="2" title="please fill out this field with valid link" class="editable link-input" type="link" id="link" placeholder="Site URL" />                
+                </div>
+                <div id="siteLinkValid">
+                  <div class="alert alert-danger" role="alert">
+                    Invalid Link, example: https://www.abc.com
+                  </div>
+                </div>
+                <button class="submit" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="mainFunction()">Submit</button>
+                <div id="noLincksModal">
+                    <!-- Modal -->
+                    <div  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5 py-3" id="staticBackdropLabel">Oops</h1>
+                          </div>
+                          <div class="modal-body">
+                            <p>Unable to add empty link</p>
+                            <p>Please Enter Link Name and Valid Link</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- ========= in case no link in there =========  -->
+          <section class="container bookmarks-container" id="noLinks">
+           <div class="nolink" id="no-link">            
+              <div class="nolink-icon">
+                  <i class="fas fa-ghost"></i>
+              </div>
+                  <p class="nolink-message">No Links</p>
+            </div>
+          </section>
+          <!-- ========= in case thair is links =========  -->
+          <section class="container bookmarks-container">
+            <table class="table table-dark table-striped">
+              <thead id="linkList">
+                <tr class="text-center">
+                  <th scope="col" class="icon">Index</th>
+                  <th scope="col">Website Name</th>
+                  <th scope="col">Vist</th>
+                  <th scope="col">Delete</th>
+                </tr>
+              </thead>
+              <tbody id="data">
+
+              </tbody>
+            </table>
+            
+          </section>
+
+      </main>
+      <script src="./js/bootstrap.bundle.min.js"></script>
+      <script src="./js/main.js"></script>
+      </body>
+</body>
+</html>
