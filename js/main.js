@@ -18,7 +18,7 @@ function emptyFields(){
 
 function getLinks() {
 var siteNameCheck = /^[a-z,A-Z,0-9]{3,40}$/;
-var siteLineCheck = /^https:\/\/www.[a-z,A,Z,0-9]{2,100}.com$/
+var siteLineCheck = /^https:\/\/www.[a-z,A,Z,0-9]{2,100}$/
 
 
   if ((siteName.value === '') && (siteLink.value === '')) {
